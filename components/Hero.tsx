@@ -33,7 +33,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-end gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:gap-7">
+      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-start gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:items-end sm:gap-7">
         <Pillar />
 
         <div>
