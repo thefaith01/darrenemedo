@@ -6,18 +6,18 @@ const credentials = ["BSc (Hons)", "MTPI", "AssocRICS"];
 
 function Pillar() {
   return (
-    <div className="flex w-8 flex-col items-center sm:w-14">
-      <div className="h-3.5 w-[72px] rounded-[1px] border border-gold/40 bg-line" />
-      <div className="h-2.5 w-14 border-x border-gold/40 bg-chip" />
+    <div className="flex w-6 flex-col items-center sm:w-14">
+      <div className="h-2.5 w-[44px] rounded-[1px] border border-gold/40 bg-line sm:h-3.5 sm:w-[72px]" />
+      <div className="h-2 w-9 border-x border-gold/40 bg-chip sm:h-2.5 sm:w-14" />
       <div
-        className="h-[220px] w-[38px] border-x border-gold/40 shadow-[inset_0_0_12px_rgba(0,0,0,0.05)]"
+        className="h-[160px] w-[22px] border-x border-gold/40 shadow-[inset_0_0_12px_rgba(0,0,0,0.05)] sm:h-[220px] sm:w-[38px]"
         style={{
           backgroundImage:
             "repeating-linear-gradient(90deg, #EFE4C9 0 4px, #DBCBA0 4px 8px)",
         }}
       />
-      <div className="h-2.5 w-14 border-x border-gold/40 bg-chip" />
-      <div className="h-3.5 w-[72px] rounded-[1px] border border-gold/40 bg-line" />
+      <div className="h-2 w-9 border-x border-gold/40 bg-chip sm:h-2.5 sm:w-14" />
+      <div className="h-2.5 w-[44px] rounded-[1px] border border-gold/40 bg-line sm:h-3.5 sm:w-[72px]" />
     </div>
   );
 }
@@ -33,7 +33,7 @@ export function Hero() {
         }}
       />
 
-      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto_auto] items-end gap-3 px-6 pb-14 sm:gap-7">
+      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-end gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:gap-7">
         <Pillar />
 
         <div>
@@ -72,7 +72,7 @@ export function Hero() {
 
         <Pillar />
 
-        <div className="mx-auto flex flex-col items-center sm:mx-0">
+        <div className="col-span-3 mx-auto flex flex-col items-center sm:col-span-1 sm:mx-0">
           <div className="relative h-[300px] w-[240px] rounded-[110px_110px_6px_6px] border-2 border-gold/40 bg-chip p-2.5 shadow-[0_24px_48px_-16px_rgba(42,32,22,0.3)]">
             {/* Add a headshot at public/profile.jpg */}
             <div className="relative h-full w-full overflow-hidden rounded-[100px_100px_2px_2px] bg-line">
