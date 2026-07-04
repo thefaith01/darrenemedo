@@ -41,7 +41,7 @@ export const about = {
   heading: "About",
   paragraphs: [
     "I'm Darren Emedo, a property management leader based in London. I'm currently a Team Leader at HML Group, where I own retention risk and senior client escalations across the team, provide second-line leadership to a group of Property Managers, and oversee large residential estates, including some carrying seven-figure service charge budgets and higher-risk building safety obligations.",
-    "My path here wasn't a straight line. I spent a decade leading the property management function at an independent estate agency, ran a private client-side block management business on the side, and joined HML Group in 2023, progressing from Property Manager to Senior Property Manager & Client Engagement Manager to Team Leader within two years. I hold a BSc (Hons) in International Business from Brunel University, I'm a Member of The Property Institute (MTPI) and an AssocRICS, and I'm currently working towards full RICS chartership.",
+    "My path here wasn't a straight line. I spent a decade leading the property management function at an independent estate agency, ran a private client-side block management business on the side, and joined HML Group in 2023, progressing from Property Manager to Senior Property Manager & Client Engagement Manager to Team Leader within two years. I hold a BSc (Hons) in International Business from Brunel University, I'm a Member of The Property Institute (MTPI) and an AssocRICS, and I'm currently completing my RICS Assessment of Professional Competence (APC) towards MRICS chartership.",
     "Beyond my day-to-day portfolio, I've built things that outlasted my job description: a groupwide client retention and early-warning system that reversed a year-on-year rise in client losses and cut attrition by roughly a third; a national briefing to over 100 property managers on a new business-development incentive scheme; and a monthly Employee NPS tracker now used to spot what's working across the business and repeat it. I'm also a volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals through leadership development and career progression.",
     "Outside of property, I write In Progress, a weekly newsletter and Substack (He Who Has Ears) on mindset, systems, and the gap between ambition and action, drawing on ideas from Napoleon Hill and Atomic Habits alongside my own difficult lessons in discipline, fear, and self-advocacy. I also build software end-to-end with AI, because the same principle applies everywhere: systems beat goals, and the only real obstacle is usually fear.",
   ],
@@ -52,6 +52,8 @@ export const highlights = [
   "Delivered a live national briefing to 100+ property managers on a new business-development incentive scheme.",
   "Built the Employee NPS tracker now used monthly to identify high-performing teams and repeat what works.",
   "Volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals.",
+  "Led a six-figure communal heating replacement project for a London residential block end-to-end, from options appraisal and lease compliance through statutory consultation and contractor procurement.",
+  "Introduced drone roof surveys across parts of my portfolio to catch defects early and cut reactive repair costs.",
 ];
 
 export const whatIDo = {
