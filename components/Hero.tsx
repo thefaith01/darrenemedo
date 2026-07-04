@@ -37,7 +37,7 @@ export function Hero() {
         <Pillar />
 
         <div>
-          <p className="mb-3 font-display text-sm tracking-[0.2em] text-accent">SALVE — I&apos;M</p>
+          <p className="mb-3 font-display text-sm tracking-[0.2em] text-accent">SALVE, I&apos;M</p>
           <h1 className="font-display text-[38px] font-bold leading-[1.05] tracking-[0.02em] text-ink sm:text-[56px]">
             {site.name.toUpperCase()}
           </h1>
@@ -90,7 +90,7 @@ export function Hero() {
               TEAM LEADER
             </p>
             <p className="mt-1 font-serif text-[13px] italic text-muted">
-              HML Group — Leasehold Block Management
+              HML Group, Leasehold Block Management
             </p>
           </div>
         </div>

@@ -24,6 +24,17 @@ export const site = {
   subheadline:
     "I lead client retention and property teams at HML Group, mentor rising professionals through The Property Institute, and write about the systems and mindset behind lasting progress.",
   email: "darren.emedo@gmail.com",
+  keywords: [
+    "Darren Emedo",
+    "Darren Emedo HML Group",
+    "Darren Emedo property management",
+    "Darren Emedo Property Institute",
+    "Darren Emedo He Who Has Ears",
+    "Darren Emedo In Progress newsletter",
+    "property management leader London",
+    "block management Team Leader",
+    "MTPI AssocRICS",
+  ],
 };
 
 export const about = {
