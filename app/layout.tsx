@@ -14,6 +14,9 @@ export const metadata: Metadata = {
   keywords: site.keywords,
   authors: [{ name: site.name, url: site.domain }],
   creator: site.name,
+  verification: {
+    google: "Yj_hZq33Ah9TLNz8BtHDBGoI33F7WyX4a7URn7xl5y4",
+  },
   alternates: {
     canonical: site.domain,
   },
