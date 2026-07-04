@@ -72,12 +72,16 @@ export function SectionHeader({
   subtitle?: string;
 }) {
   return (
-    <div className="mb-7">
-      {eyebrow && <p className="mb-1.5 font-serif text-lg italic text-accent">{eyebrow}</p>}
-      <h2 className="font-display text-[30px] font-bold leading-tight tracking-[-0.02em] text-ink">
+    <div className="mb-8">
+      {eyebrow && (
+        <div className="section-divider">
+          <span className="section-divider-label">{eyebrow}</span>
+        </div>
+      )}
+      <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-ink">
         {title}
       </h2>
-      {subtitle && <p className="mt-1.5 text-[15px] text-muted">{subtitle}</p>}
+      {subtitle && <p className="mt-2 text-[15px] text-muted">{subtitle}</p>}
     </div>
   );
 }

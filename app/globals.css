@@ -43,3 +43,133 @@ body {
   background-image: repeating-linear-gradient(90deg, #B7963E 0 10px, transparent 10px 20px);
   opacity: 0.5;
 }
+
+/* Architectural design system */
+
+/* Section divider — evokes architectural section lines */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 48px;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+
+.section-divider::before {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: #B7963E;
+  opacity: 0.6;
+}
+
+.section-divider-label {
+  font-family: 'Cinzel', serif;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #B7963E;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.section-divider::after {
+  content: '';
+  flex: 1;
+  height: 1.5px;
+  background: #B7963E;
+  opacity: 0.6;
+}
+
+/* Corner bracket — architectural callout accent */
+.corner-bracket {
+  position: relative;
+}
+
+.corner-bracket::before,
+.corner-bracket::after {
+  content: '';
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 1.5px solid #B7963E;
+  opacity: 0.7;
+}
+
+/* Top-left corner */
+.corner-bracket::before {
+  top: -4px;
+  left: -4px;
+  border-right: none;
+  border-bottom: none;
+}
+
+/* Bottom-right corner */
+.corner-bracket::after {
+  bottom: -4px;
+  right: -4px;
+  border-left: none;
+  border-top: none;
+}
+
+/* Card with gold accent line */
+.card-with-accent {
+  position: relative;
+  border: 1px solid #E8DCC8;
+  border-top: 3px solid #B7963E;
+  background: #FBF6EA;
+  padding: 20px;
+  transition: all 200ms ease;
+}
+
+.card-with-accent:hover {
+  border-top-color: #A23E24;
+  box-shadow: 0 8px 24px rgba(42, 32, 22, 0.08);
+}
+
+/* Highlight item with bracket styling */
+.highlight-item {
+  position: relative;
+  padding: 16px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background: #FBF6EA;
+  border: 1px solid #E8DCC8;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.highlight-item::before {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: #B7963E;
+  top: 12px;
+  left: 10px;
+}
+
+/* Hover animation for cards */
+@media (prefers-reduced-motion: no-preference) {
+  .card-hover-accent {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-hover-accent::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #B7963E, transparent);
+    transition: left 400ms ease;
+  }
+
+  .card-hover-accent:hover::before {
+    left: 100%;
+  }
+}
