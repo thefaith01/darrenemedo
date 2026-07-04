@@ -51,10 +51,10 @@ const personJsonLd = {
   name: site.name,
   url: site.domain,
   image: `${site.domain}/profile.jpg`,
-  jobTitle: "Team Leader, Property Management",
+  jobTitle: "Associate Director, Residential Management",
   worksFor: {
     "@type": "Organization",
-    name: "HML Group",
+    name: "Regency",
   },
   alumniOf: {
     "@type": "CollegeOrUniversity",

@@ -22,7 +22,7 @@ export const site = {
   domain: "https://darrenemedo.com",
   headline: "Property management leader, mentor, and writer on mindset & growth.",
   subheadline:
-    "I lead client retention and property teams at HML Group, mentor rising professionals through The Property Institute, and write about the systems and mindset behind lasting progress.",
+    "Associate Director of Residential Management at Regency, mentor rising professionals through The Property Institute, and writer on the systems and mindset behind lasting progress.",
   email: "darren.emedo@gmail.com",
   keywords: [
     "Darren Emedo",
@@ -40,8 +40,8 @@ export const site = {
 export const about = {
   heading: "About",
   paragraphs: [
-    "I'm Darren Emedo, a property management leader based in London. I'm currently a Team Leader at HML Group, where I own retention risk and senior client escalations across the team, provide second-line leadership to a group of Property Managers, and oversee large residential estates, including some carrying seven-figure service charge budgets and higher-risk building safety obligations.",
-    "My path here wasn't a straight line. I spent a decade leading the property management function at an independent estate agency, ran a private client-side block management business on the side, and joined HML Group in 2023, progressing from Property Manager to Senior Property Manager & Client Engagement Manager to Team Leader within two years. I hold a BSc (Hons) in International Business from Brunel University, I'm a Member of The Property Institute (MTPI) and an AssocRICS, and I'm currently completing my RICS Assessment of Professional Competence (APC) towards MRICS chartership.",
+    "I'm Darren Emedo, a property management leader based in London. I'm currently Associate Director of Residential Management at Regency, leading teams and oversight of residential portfolios with multi-million-pound service charge budgets and building safety compliance. I previously spent two years at HML Group, progressing from Property Manager to Team Leader, where I owned retention risk, senior escalations, and second-line leadership across the team.",
+    "My path here wasn't a straight line. I spent a decade leading the property management function at an independent estate agency, ran a private client-side block management business on the side, and joined HML Group in 2023, progressing from Property Manager to Senior Property Manager & Client Engagement Manager to Team Leader within two years. I hold a BSc (Hons) in International Business from Brunel University, I'm a Member of The Property Institute (MTPI) and an AssocRICS, and I've passed my RICS APC preliminary review—I'm submitting my final submission in August 2026 and interviewing in October 2026 towards MRICS chartership.",
     "Beyond my day-to-day portfolio, I've built things that outlasted my job description: a groupwide client retention and early-warning system that reversed a year-on-year rise in client losses and cut attrition by roughly a third; a national briefing to over 100 property managers on a new business-development incentive scheme; and a monthly Employee NPS tracker now used to spot what's working across the business and repeat it. I'm also a volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals through leadership development and career progression.",
     "Outside of property, I write In Progress, a weekly newsletter and Substack (He Who Has Ears) on mindset, systems, and the gap between ambition and action, drawing on ideas from Napoleon Hill and Atomic Habits alongside my own difficult lessons in discipline, fear, and self-advocacy. I also build software end-to-end with AI, because the same principle applies everywhere: systems beat goals, and the only real obstacle is usually fear.",
   ],
@@ -62,7 +62,7 @@ export const whatIDo = {
     {
       title: "Property Management Leadership",
       description:
-        "Team Leader at HML Group, second-line leadership across a team of Property Managers, and direct ownership of retention risk on large residential estates with seven-figure service charge budgets.",
+        "Associate Director of Residential Management at Regency, leading residential teams and oversight of properties with multi-million-pound service charge budgets and building safety compliance obligations.",
     },
     {
       title: "Client Retention & Commercial Strategy",
