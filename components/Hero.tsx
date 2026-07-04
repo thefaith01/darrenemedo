@@ -88,10 +88,10 @@ export function Hero() {
           </div>
           <div className="-mt-2 max-w-[220px] rounded-[2px] border border-line bg-paper px-4 py-3 text-center shadow-[0_12px_28px_-14px_rgba(42,32,22,0.25)]">
             <p className="font-display text-[12.5px] font-bold tracking-[0.03em] text-ink">
-              TEAM LEADER
+              AD
             </p>
             <p className="mt-1 font-serif text-[13px] italic text-muted">
-              HML Group, Leasehold Block Management
+              Regency
             </p>
           </div>
         </div>
