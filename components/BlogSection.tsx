@@ -9,14 +9,14 @@ export async function BlogSection() {
     <Section id="blog" className="border-y border-line bg-paper">
       <SectionHeader eyebrow="Writing" title={blog.heading} subtitle={blog.subtitle} />
       {posts.length > 0 ? (
-        <div className="grid gap-4 md:grid-cols-3">
+        <div data-reveal className="grid gap-4 md:grid-cols-3">
           {posts.map((post) => (
             <a
               key={post.link}
               href={post.link}
               target="_blank"
               rel="noopener"
-              className="block rounded-sm border border-line bg-base p-5 no-underline transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(42,32,22,0.2)]"
+              className="clipping-card block rounded-sm border border-line bg-base p-5 no-underline transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(42,32,22,0.2)]"
             >
               <p className="font-serif text-xs italic text-faint">{formatPostDate(post.pubDate)}</p>
               <h3 className="mt-2 font-display text-[16px] font-bold leading-snug text-ink">

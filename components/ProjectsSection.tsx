@@ -10,7 +10,7 @@ export function ProjectsSection() {
         title="Projects"
         subtitle="Live products, built end-to-end with AI."
       />
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div data-reveal className="grid gap-4 sm:grid-cols-2">
         {projects.map((p) => (
           <ProjectCard key={p.href} project={p} />
         ))}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { SiteFooter } from "@/components/SiteFooter";
+import { ScrollReveal } from "@/components/ScrollReveal";
 import { site, connections } from "@/lib/content";
 import "./globals.css";
 
@@ -83,6 +84,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen bg-base text-ink">{children}</main>
         <SiteFooter />
+        <ScrollReveal />
       </body>
     </html>
   );

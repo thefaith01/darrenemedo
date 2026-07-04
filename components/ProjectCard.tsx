@@ -7,7 +7,7 @@ export function ProjectCard({ project }: { project: Project }) {
       href={project.href}
       target="_blank"
       rel="noopener"
-      className="block rounded-sm border border-line bg-paper p-6 no-underline transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(42,32,22,0.2)]"
+      className="blueprint-card block border border-line bg-paper p-6 no-underline transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(42,32,22,0.2)]"
     >
       <Badge>{project.tag}</Badge>
       <h3 className="mt-3 font-display text-[17px] font-bold text-ink">{project.title}</h3>

@@ -32,6 +32,7 @@ export function Hero() {
             "radial-gradient(700px 460px at 85% 0%, rgba(162,62,36,0.09), transparent 62%), radial-gradient(600px 500px at 5% 100%, rgba(183,150,62,0.12), transparent 65%), linear-gradient(180deg, #F6F0E2, #F3ECDD 60%)",
         }}
       />
+      <div className="hero-blueprint-grid pointer-events-none absolute inset-0 z-0" />
 
       <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-start gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:items-end sm:gap-7">
         <Pillar />

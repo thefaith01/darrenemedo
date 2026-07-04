@@ -11,7 +11,7 @@ export function ContactSection() {
         title="Contact"
         subtitle="Send me a message, or reach out on any of the platforms below."
       />
-      <div className="grid gap-6 md:grid-cols-[1.4fr_1fr]">
+      <div data-reveal className="grid gap-6 md:grid-cols-[1.4fr_1fr]">
         <Card>
           <ContactForm />
         </Card>
