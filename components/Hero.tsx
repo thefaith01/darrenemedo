@@ -36,15 +36,15 @@ export function Hero() {
       <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-start gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:items-end sm:gap-7">
         <Pillar />
 
-        <div>
+        <div className="text-center sm:text-left">
           <p className="mb-3 font-display text-sm tracking-[0.2em] text-accent">SALVE, I&apos;M</p>
           <h1 className="font-display text-[38px] font-bold leading-[1.05] tracking-[0.02em] text-ink sm:text-[56px]">
             {site.name.toUpperCase()}
           </h1>
 
-          <div className="my-5 h-0.5 w-16 bg-gold" />
+          <div className="my-5 mx-auto h-0.5 w-16 bg-gold sm:mx-0" />
 
-          <div className="mb-5 flex flex-wrap gap-2">
+          <div className="mb-5 flex flex-wrap justify-center gap-2 sm:justify-start">
             {credentials.map((c) => (
               <span
                 key={c}
@@ -55,12 +55,12 @@ export function Hero() {
             ))}
           </div>
 
-          <p className="max-w-[480px] font-serif text-xl italic text-ink">{site.headline}</p>
-          <p className="mt-3.5 max-w-[460px] text-[16.5px] leading-relaxed text-muted">
+          <p className="mx-auto max-w-[480px] font-serif text-xl italic text-ink sm:mx-0">{site.headline}</p>
+          <p className="mx-auto mt-3.5 max-w-[460px] text-[16.5px] leading-relaxed text-muted sm:mx-0">
             {site.subheadline}
           </p>
 
-          <div className="mt-7 flex flex-wrap gap-3.5">
+          <div className="mt-7 flex flex-wrap justify-center gap-3.5 sm:justify-start">
             <a href="#projects" className={ui.btnPrimary}>
               MY PROJECTS
             </a>
