@@ -12,17 +12,24 @@ export function ContactForm() {
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const formData = new FormData(form);
+    const data = new FormData(form);
+    const payload = {
+      name: data.get("name"),
+      email: data.get("email"),
+      message: data.get("message"),
+    };
 
     setStatus("sending");
     setError("");
     try {
-      const res = await fetch("https://formspree.io/f/mdaryqjn", {
+      const res = await fetch("/api/contact", {
         method: "POST",
-        body: formData,
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
       });
+      const json = await res.json();
       if (!res.ok) {
-        setError("Something went wrong. Please try again.");
+        setError(json.error || "Something went wrong. Please try again.");
         setStatus("error");
         return;
       }
