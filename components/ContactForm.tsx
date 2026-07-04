@@ -17,7 +17,7 @@ export function ContactForm() {
     setStatus("sending");
     setError("");
     try {
-      const res = await fetch("https://formspree.io/f/mbjqozko", {
+      const res = await fetch("https://formspree.io/f/mdaryqjn", {
         method: "POST",
         body: formData,
       });
