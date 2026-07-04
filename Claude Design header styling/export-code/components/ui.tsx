@@ -73,18 +73,22 @@ export function SectionHeader({
 }) {
   return (
     <div className="mb-7">
-      {eyebrow && <p className="mb-1.5 font-serif text-lg italic text-accent">{eyebrow}</p>}
-      <h2 className="font-display text-[30px] font-bold leading-tight tracking-[-0.02em] text-ink">
-        {title}
+      {eyebrow && (
+        <p className="mb-2 font-display text-[13px] tracking-[0.2em] text-accent">
+          {eyebrow.toUpperCase()}
+        </p>
+      )}
+      <h2 className="font-display text-[28px] font-bold tracking-[0.02em] text-ink">
+        {title.toUpperCase()}
       </h2>
-      {subtitle && <p className="mt-1.5 text-[15px] text-muted">{subtitle}</p>}
+      {subtitle && <p className="mt-2 font-serif text-[15.5px] italic text-muted">{subtitle}</p>}
     </div>
   );
 }
 
 export function Badge({ children }: { children: ReactNode }) {
   return (
-    <span className="inline-block rounded-full bg-chip px-2.5 py-0.5 text-xs font-semibold text-muted">
+    <span className="inline-block rounded-sm bg-chip px-2.5 py-1 font-display text-[11px] font-semibold tracking-[0.05em] text-muted">
       {children}
     </span>
   );
