@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { saveContactMessage } from "@/lib/db";
+import { sendContactEmail } from "@/lib/email";
 import { isEmail, boundedString } from "@/lib/validate";
 import { rateLimit, clientIp } from "@/lib/rateLimit";
 
@@ -34,7 +34,7 @@ export async function POST(req: NextRequest) {
   }
 
   try {
-    await saveContactMessage({ name: cleanName, email, message: cleanMessage });
+    await sendContactEmail({ name: cleanName, email: email as string, message: cleanMessage });
   } catch (err) {
     console.error("Contact message failed:", err);
     return NextResponse.json(
