@@ -6,7 +6,7 @@ const credentials = ["BSc (Hons)", "MTPI", "AssocRICS"];
 
 function Pillar() {
   return (
-    <div className="hidden w-14 flex-col items-center sm:flex">
+    <div className="flex w-12 flex-col items-center sm:w-14">
       <div className="h-3.5 w-[72px] rounded-[1px] border border-gold/40 bg-line" />
       <div className="h-2.5 w-14 border-x border-gold/40 bg-chip" />
       <div
