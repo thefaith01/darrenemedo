@@ -55,7 +55,6 @@ export const highlights = [
   "Built the Employee NPS tracker now used monthly to identify high-performing teams and repeat what works.",
   "Volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals.",
   "Led a six-figure communal heating replacement project for a London residential block end-to-end, from options appraisal and lease compliance through statutory consultation and contractor procurement.",
-  "Introduced drone roof surveys across parts of my portfolio to catch defects early and cut reactive repair costs.",
 ];
 
 export const whatIDo = {
