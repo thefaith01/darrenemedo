@@ -28,7 +28,7 @@ export type Testimonial = {
 
 export const site = {
   name: "Darren Emedo",
-  domain: "https://darrenemedo.com",
+  domain: "https://www.darrenemedo.com",
   headline: "Property management leader, mentor, and writer on mindset & growth.",
   subheadline:
     "Associate Director of Residential Management at Regency, mentor rising professionals through The Property Institute, and writer on the systems and mindset behind lasting progress.",
