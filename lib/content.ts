@@ -17,6 +17,14 @@ export type Project = {
   href: string;
 };
 
+export type Testimonial = {
+  author: string;
+  rating: number;
+  text: string;
+  source: string;
+  url: string;
+};
+
 export const site = {
   name: "Darren Emedo",
   domain: "https://darrenemedo.com",
@@ -97,6 +105,184 @@ export const projects: Project[] = [
       "A private, church-verified marketplace where members offer and find trusted services within their community.",
     tag: "Marketplace",
     href: "https://www.cmmarketplace.org",
+  },
+];
+
+export const testimonials: Testimonial[] = [
+  {
+    author: "Natasha",
+    rating: 5,
+    text: "The best thing about HML is Darren Emedo! Darren has been a wonderful property manager for our company. He is kind, attentive, polite and solutions-oriented. He doesn't shy away from addressing trickier issues that have been left unattended in the past and he does so in an efficient and thorough way. He is very knowledgeable and engages with the residents and the wider community. We are very lucky to have you, Darren!",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672cb5e8195293a644959c4f",
+  },
+  {
+    author: "Nathan",
+    rating: 5,
+    text: "I rarely ever do reviews, and have never done for the many property agents I've worked with. However, on this occasion for Darren at HML / London, it is thoroughly merited. Of all the PMs we've had for our building, he genuinely is the best we've had. He's responsive, attentive and gets things done. I hope he remains on our account.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/673363f9305cbf941789de28",
+  },
+  {
+    author: "Dave H",
+    rating: 5,
+    text: "I have always found Darren to be a very helpful manager of the estate on which I live and for which he has responsibilities for. Having talked to previous managers over a number of years I have found Darren to be the best yet. He is responsive and self motivated, often coming up with good ideas for the benefit of the estate as a whole as well as for me personally when I have had problems with the current parking system. He is a good listener and takes his responsibilities seriously and carries out his job in a professional way.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672a934ee4808a9a866d7406",
+  },
+  {
+    author: "Craig Simms",
+    rating: 5,
+    text: "Darren is the best property manager we've had from HML. Reliable and responsive, he's completely changed my perception of the service HML can provide to a smaller property. He's an asset to HML and has made us no longer consider changing from HML.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672a63f0ba2d15acb6fd0ad2",
+  },
+  {
+    author: "Verified Customer",
+    rating: 5,
+    text: "Darren-Martyn Emedo is the reason for this 5 star rating. To finally have a property manager who takes the initiative, responds in a very timely manner and sees things through is very welcome and highly appreciated. If it wasn't for him, this rating would be lower.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672a6b5352a364fd6c71de0e",
+  },
+  {
+    author: "Jeremy McIlroy",
+    rating: 5,
+    text: "Darren has done a great job in helping our Right To Manage company through some demanding projects over the last 12 months and has greatly enhanced our long standing relationship with HML. Many thanks.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/67338c3cbd88d657dc769806",
+  },
+  {
+    author: "J Y",
+    rating: 5,
+    text: "Requested a fire risk assessment document from Darren-Martyn Emedo and he was very quick in replying. Managed to get the doc to me quickly without much fuss and soon after the actual assessment took place. Very helpful and efficient.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/6732854d6516332202fca515",
+  },
+  {
+    author: "Ben",
+    rating: 5,
+    text: "Very complete service. Responsive on issues big, complex and small. Online portal very good, and big shout to our very hard working property manager, Darren Martyn Emedo!",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672b39a80e5c01c1e08f6ba3",
+  },
+  {
+    author: "Steve McGuire",
+    rating: 5,
+    text: "Darren is new to Brunel Point but is like a breath of fresh air. He is friendly, helpful, responsive and most importantly gets things done. Huge improvement and an asset to HML.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672a665af96c8e9580e54598",
+  },
+  {
+    author: "Frank Tropea",
+    rating: 5,
+    text: "Darren has always been courteous and helpful, and we have always managed to sort any issue that may have arisen. Hopefully we can continue this cooperation for the good of Coulthurst Court.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672b43dc5eafe62fd92e434c",
+  },
+  {
+    author: "I Walter",
+    rating: 5,
+    text: "I have had to contact Darren-Martyn Emedo on a few occasions when I needed problems resolved. He has provided an excellent service by always responding to calls and dealing with issues effectively and promptly.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672aa0775de7212dc25c3012",
+  },
+  {
+    author: "Elizabeth Boultbee",
+    rating: 5,
+    text: "Darren Emedo is the best property manager we have ever had at HML after years of mediocrity. I would certainly recommend him.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672e1c292aefdf231546d633",
+  },
+  {
+    author: "Moe",
+    rating: 5,
+    text: "Darren has been a great support in addressing concerns in relation to the management of Crispin Way. He has always responded to raised issues with immediate effect and a quick turn around. I hope this collaboration continues in delivering the great service he has provided to date.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672ce6a7a4ede5b8a14955a0",
+  },
+  {
+    author: "Phil",
+    rating: 5,
+    text: "Understanding and responsive, Darren immediately took ownership of the issue I was having and not only got it solved, but found the root cause from the third party contractor causing me the issue. Great service.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/67a108b89961bf0bb0a409f4",
+  },
+  {
+    author: "Sophie Daker",
+    rating: 5,
+    text: "Darren has been amazing at dealing with any issues we have had during the sale of our property and raising our requests with the appropriate persons. He is always incredibly responsive.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672b4b8d5bbb7b1428d45114",
+  },
+  {
+    author: "Radwan Dakmak",
+    rating: 5,
+    text: "Great rate of response to any problem. I want to commend Darren our property manager for the great job he's doing.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672aa8478717a97677bed6a8",
+  },
+  {
+    author: "P Strickland",
+    rating: 5,
+    text: "Darren Martyn Emedo at HML is our property manager and we are lucky to have him. He works hard and is responsive.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/673cc8c20652661148a8538e",
+  },
+  {
+    author: "Omar",
+    rating: 5,
+    text: "Darren is a fantastic property manager who looks after the place and is very quick to respond to situations, always getting the best outcome.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/673db900c4b0a4c1f19a2ad2",
+  },
+  {
+    author: "David Spencer",
+    rating: 5,
+    text: "Darren has been a great building manager, really responsive and takes action to address issues.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/67a0f44978e1712cea022b5b",
+  },
+  {
+    author: "Steven King",
+    rating: 5,
+    text: "Darren Emedo has been extremely proactive in getting stuck into longstanding issues we've experienced in our estate, generating real results and progress across a range of issues.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672b3e49a7c66e956b17dea3",
+  },
+  {
+    author: "Omar Radwan",
+    rating: 5,
+    text: "I recently contacted Darren-Martyn Emedo about a leak, and he responded promptly and supportively, making the process smooth and reassuring. Much appreciated!",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672a6766629a02ed4679ae1c",
+  },
+  {
+    author: "Peter Maddock",
+    rating: 5,
+    text: "Darren is always quick to respond and a problem solver.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672e24b878198a50c8159dd1",
+  },
+  {
+    author: "Philip Donald",
+    rating: 5,
+    text: "Darren Emedo has been incredibly responsive and helpful.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/672c8d2d8daa3dcce3fb261e",
+  },
+  {
+    author: "Kish Desai",
+    rating: 5,
+    text: "We need to apply for garage conversion permission for our rental property, which is managed by HML. Our estate manager is Darren-Martyn Emedo. I explained the issue to him and the urgency. Fearing this could take weeks or months, he immediately understood my issue, found a solution and got it all done within a couple of days. Eternally grateful he looked after us so promptly and empathetically.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/67a4ae109af281d3e8aff790",
+  },
+  {
+    author: "Steven Greenwood",
+    rating: 5,
+    text: "Darren Emedo was very efficient and easy to interact with concerning quite an urgent issue. His pro-activeness prevented the issue from escalating and it was able to get resolved fully and quickly. He is definitely an asset to HML.",
+    source: "Trustpilot",
+    url: "https://www.trustpilot.com/reviews/66310b42c4b05475eb466e9f",
   },
 ];
 
