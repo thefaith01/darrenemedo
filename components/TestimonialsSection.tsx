@@ -38,9 +38,12 @@ function TestimonialCard({
         &ldquo;{testimonial.text}&rdquo;
       </p>
       <div className="mt-4 flex items-center justify-between border-t border-line pt-3">
-        <p className="font-serif text-[13px] font-semibold text-muted">
-          {testimonial.author}
-        </p>
+        <div>
+          <p className="font-serif text-[13px] font-semibold text-muted">
+            {testimonial.author}
+          </p>
+          <p className="mt-0.5 text-[11px] text-faint">{testimonial.date}</p>
+        </div>
         <span className="font-display text-[10px] font-semibold tracking-[0.03em] text-faint opacity-0 transition-opacity group-hover:opacity-100">
           VIEW ↗
         </span>
@@ -55,7 +58,7 @@ export function TestimonialsSection() {
       <SectionHeader
         eyebrow="Verified reviews"
         title="What clients say"
-        subtitle={`${testimonials.length} five-star Trustpilot reviews naming Darren directly, left by residents and clients at HML Group.`}
+        subtitle={`${testimonials.length} five-star reviews naming Darren directly, left by residents and clients.`}
       />
       <div
         data-reveal
@@ -65,14 +68,6 @@ export function TestimonialsSection() {
           <TestimonialCard key={testimonial.url} testimonial={testimonial} />
         ))}
       </div>
-      <a
-        href="https://uk.trustpilot.com/review/www.hmlgroup.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-4 inline-flex items-center gap-1.5 font-display text-xs font-semibold tracking-[0.03em] text-[#00b67a] hover:underline"
-      >
-        See all reviews on Trustpilot ↗
-      </a>
     </Section>
   );
 }
