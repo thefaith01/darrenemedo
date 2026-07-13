@@ -6,7 +6,7 @@ export function SermonSection() {
       <SectionHeader
         eyebrow="Faith"
         title="One sermon"
-        subtitle="A single public message on faith, judgment, and what it means to live well."
+        subtitle="Exploring what happens when good intentions aren't enough, and why we can't perfectly fix our own moral failures."
       />
       <div
         data-reveal
