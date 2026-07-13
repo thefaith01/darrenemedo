@@ -5,6 +5,7 @@ import { WhatIDoSection } from "@/components/WhatIDoSection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ProjectsSection } from "@/components/ProjectsSection";
 import { BlogSection } from "@/components/BlogSection";
+import { SermonSection } from "@/components/SermonSection";
 import { ContactSection } from "@/components/ContactSection";
 
 export default function HomePage() {
@@ -17,6 +18,7 @@ export default function HomePage() {
       <TestimonialsSection />
       <ProjectsSection />
       <BlogSection />
+      <SermonSection />
       <ContactSection />
     </>
   );
