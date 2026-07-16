@@ -8,10 +8,8 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request." }, { status: 400 });
   }
 
-  const { name, email, phone, role, address, units, notes } = (body ?? {}) as Record<
-    string,
-    unknown
-  >;
+  const { name, email, phone, role, address, units, notes, bestInClass } = (body ??
+    {}) as Record<string, unknown>;
 
   if (!name || !email || !role || !address || !units) {
     return NextResponse.json({ error: "Missing fields." }, { status: 400 });
@@ -30,6 +28,7 @@ export async function POST(req: NextRequest) {
         address,
         units,
         notes,
+        bestInClass,
       }),
     });
 

@@ -10,19 +10,23 @@ const RE_ENQUIRY_MONTHS = 3;
 export function WaitlistForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState("");
+  const [role, setRole] = useState("");
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
+    const roleValue = data.get("role");
+    const roleOther = data.get("roleOther");
     const payload = {
       name: data.get("name"),
       email: data.get("email"),
       phone: data.get("phone"),
-      role: data.get("role"),
+      role: roleValue === "Other" && roleOther ? `Other: ${roleOther}` : roleValue,
       address: data.get("address"),
       units: data.get("units"),
       notes: data.get("notes"),
+      bestInClass: data.get("bestInClass") ? "Yes" : "No",
     };
 
     setStatus("sending");
@@ -40,6 +44,7 @@ export function WaitlistForm() {
         return;
       }
       form.reset();
+      setRole("");
       setStatus("sent");
     } catch {
       setError("Something went wrong. Please try again.");
@@ -107,7 +112,14 @@ export function WaitlistForm() {
         <label htmlFor="wl-role" className={ui.label}>
           Relationship to the building
         </label>
-        <select id="wl-role" name="role" required className={ui.input}>
+        <select
+          id="wl-role"
+          name="role"
+          required
+          className={ui.input}
+          value={role}
+          onChange={(e) => setRole(e.target.value)}
+        >
           <option value="">Select one</option>
           <option value="Leaseholder">Leaseholder</option>
           <option value="Resident Director">Resident Director</option>
@@ -115,6 +127,21 @@ export function WaitlistForm() {
           <option value="Other">Other</option>
         </select>
       </div>
+      {role === "Other" && (
+        <div>
+          <label htmlFor="wl-role-other" className={ui.label}>
+            Please specify
+          </label>
+          <input
+            id="wl-role-other"
+            name="roleOther"
+            required
+            maxLength={100}
+            className={ui.input}
+            placeholder="Your relationship to the building"
+          />
+        </div>
+      )}
       <div>
         <label htmlFor="wl-address" className={ui.label}>
           Address of the building
@@ -154,6 +181,18 @@ export function WaitlistForm() {
           className={ui.input}
           placeholder="Anything else worth knowing"
         />
+      </div>
+      <div className="flex items-start gap-2.5">
+        <input
+          id="wl-best-in-class"
+          name="bestInClass"
+          type="checkbox"
+          required
+          className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-line text-accent focus:ring-2 focus:ring-gold/40"
+        />
+        <label htmlFor="wl-best-in-class" className="text-[14px] leading-snug text-muted">
+          I&apos;m looking for best-in-class service, not the cheapest option
+        </label>
       </div>
       {error && <p className="text-sm text-red-600">{error}</p>}
       <button type="submit" disabled={status === "sending"} className={ui.btnPrimary}>
