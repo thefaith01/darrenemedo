@@ -4,6 +4,7 @@ import { site } from "@/lib/content";
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#what-i-do", label: "What I Do" },
+  { href: "#waitlist", label: "Waiting List" },
   { href: "#testimonials", label: "Reviews" },
   { href: "#projects", label: "Projects" },
   { href: "#blog", label: "Blog" },
