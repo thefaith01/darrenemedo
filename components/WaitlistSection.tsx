@@ -6,7 +6,7 @@ export function WaitlistSection() {
     <Section id="waitlist">
       <SectionHeader
         eyebrow="New instructions"
-        title="Not taking on new buildings right now. But if you're serious about best-in-class management, join the waiting list."
+        title="Not taking on any more clients right now. But if you're serious about best-in-class management, join the waiting list."
       />
       <div data-reveal className="grid gap-6 md:grid-cols-[1fr_1.2fr]">
         <div className="space-y-4 text-[15px] leading-relaxed text-muted">
