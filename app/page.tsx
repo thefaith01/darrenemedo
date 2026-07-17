@@ -16,8 +16,8 @@ export default function HomePage() {
       <AboutSection />
       <CornerstoneSection />
       <WhatIDoSection />
-      <WaitlistSection />
       <TestimonialsSection />
+      <WaitlistSection />
       <ProjectsSection />
       <BlogSection />
       <SermonSection />
