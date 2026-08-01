@@ -12,37 +12,34 @@ const navLinks = [
 
 export function Header() {
   return (
-    <header className="sticky top-0 z-40 border-b border-line bg-base/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-6 gap-y-2 px-6 py-3.5">
+    <header className="fixed left-0 right-0 top-0 z-50 px-6 py-4 sm:px-10 sm:py-5 md:px-14">
+      <div className="mx-auto flex max-w-5xl items-center justify-between">
         <Link href="/" className="flex items-center gap-2.5 no-underline">
-          <span className="monogram-ring flex h-[34px] w-[34px] items-center justify-center rounded-full border-[1.5px] border-gold font-display text-[13px] font-bold text-gold shadow-[inset_0_0_0_3px_rgba(183,150,62,0.12)]">
+          <span className="monogram-ring flex h-8 w-8 items-center justify-center rounded-full border-[1.5px] border-gold font-display text-[13px] font-bold text-gold shadow-[inset_0_0_0_3px_rgba(183,150,62,0.12)]">
             DE
           </span>
-          <span className="font-display text-[17px] font-bold tracking-[0.04em] text-ink">
-            {site.name.toUpperCase()}
+          <span className="font-sans text-base font-semibold tracking-tight text-ink">
+            {site.name}
           </span>
         </Link>
-        <nav className="flex flex-wrap items-center">
-          {navLinks.map((link, i) => (
+        <nav className="hidden items-center gap-8 md:flex">
+          {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className={`nav-link px-4 font-serif text-[15px] font-semibold text-muted transition-colors hover:text-accent ${
-                i < navLinks.length - 1 ? "border-r border-line" : ""
-              }`}
+              className="nav-link font-sans text-sm text-ink/70 transition-colors duration-200 hover:text-ink"
             >
               {link.label}
             </a>
           ))}
-          <a
-            href="#contact"
-            className="ml-4 inline-flex items-center justify-center rounded-sm bg-accent px-5 py-2 font-display text-xs font-semibold tracking-[0.06em] text-base transition-colors hover:bg-accent-dark"
-          >
-            CONTACT
-          </a>
         </nav>
+        <a
+          href="#contact"
+          className="inline-flex items-center justify-center rounded-lg bg-ink px-5 py-2.5 font-sans text-sm font-medium text-white transition-colors duration-200 hover:bg-ink/90"
+        >
+          Get in touch
+        </a>
       </div>
-      <div className="gold-rule" />
     </header>
   );
 }

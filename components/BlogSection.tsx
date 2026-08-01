@@ -9,27 +9,31 @@ export async function BlogSection() {
     <Section id="blog" className="border-y border-line bg-paper">
       <SectionHeader eyebrow="Writing" title={blog.heading} subtitle={blog.subtitle} />
       {posts.length > 0 ? (
-        <div data-reveal className="grid gap-4 md:grid-cols-3">
+        <div data-reveal className="divide-y divide-line">
           {posts.map((post) => (
             <a
               key={post.link}
               href={post.link}
               target="_blank"
               rel="noopener"
-              className="clipping-card block rounded-sm border border-line bg-base p-5 no-underline transition hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-12px_rgba(42,32,22,0.2)]"
+              className="group grid gap-1 py-5 no-underline transition-colors duration-200 sm:grid-cols-[140px_1fr] sm:items-baseline sm:gap-6"
             >
-              <p className="font-serif text-xs italic text-faint">{formatPostDate(post.pubDate)}</p>
-              <h3 className="mt-2 font-display text-[16px] font-bold leading-snug text-ink">
-                {post.title}
-              </h3>
-              {post.snippet && (
-                <p className="mt-2 text-sm leading-relaxed text-muted">{post.snippet}</p>
-              )}
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-faint">
+                {formatPostDate(post.pubDate)}
+              </p>
+              <div>
+                <h3 className="font-display text-lg font-normal leading-snug text-ink transition-colors duration-200 group-hover:text-ink/70">
+                  {post.title}
+                </h3>
+                {post.snippet && (
+                  <p className="mt-1 text-sm leading-relaxed text-muted">{post.snippet}</p>
+                )}
+              </div>
             </a>
           ))}
         </div>
       ) : (
-        <div className="rounded-sm border border-dashed border-gold/40 bg-base/60 p-9 text-center">
+        <div className="rounded-lg border border-dashed border-line bg-paper p-9 text-center">
           <p className="text-sm text-muted">Latest posts couldn&apos;t be loaded right now.</p>
         </div>
       )}

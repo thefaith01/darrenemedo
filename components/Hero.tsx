@@ -1,103 +1,81 @@
-import Image from "next/image";
-import { site } from "@/lib/content";
+import { site, hero } from "@/lib/content";
+import { BoomerangVideoBg } from "@/components/BoomerangVideoBg";
 import { ui } from "@/components/ui";
 
 const credentials = ["BSc (Hons)", "MTPI", "AssocRICS"];
 
-function Pillar() {
-  return (
-    <div className="flex w-6 flex-col items-center sm:w-14">
-      <div className="h-2.5 w-[44px] rounded-[1px] border border-gold/40 bg-line sm:h-3.5 sm:w-[72px]" />
-      <div className="h-2 w-9 border-x border-gold/40 bg-chip sm:h-2.5 sm:w-14" />
-      <div
-        className="h-[160px] w-[22px] border-x border-gold/40 shadow-[inset_0_0_12px_rgba(0,0,0,0.05)] sm:h-[220px] sm:w-[38px]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(90deg, #EFE4C9 0 4px, #DBCBA0 4px 8px)",
-        }}
-      />
-      <div className="h-2 w-9 border-x border-gold/40 bg-chip sm:h-2.5 sm:w-14" />
-      <div className="h-2.5 w-[44px] rounded-[1px] border border-gold/40 bg-line sm:h-3.5 sm:w-[72px]" />
-    </div>
-  );
-}
-
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-16">
-      <div
-        className="pointer-events-none absolute inset-0 z-0"
-        style={{
-          background:
-            "radial-gradient(700px 460px at 85% 0%, rgba(162,62,36,0.09), transparent 62%), radial-gradient(600px 500px at 5% 100%, rgba(183,150,62,0.12), transparent 65%), linear-gradient(180deg, #F6F0E2, #F3ECDD 60%)",
-        }}
-      />
-      <div className="hero-blueprint-grid pointer-events-none absolute inset-0 z-0" />
+    <section className="relative flex h-screen flex-col items-center overflow-hidden">
+      <BoomerangVideoBg src="/video/hero-elevation.mp4" />
 
-      <div className="relative z-10 mx-auto grid max-w-5xl grid-cols-[auto_1fr_auto] items-start gap-3 px-6 pb-14 sm:grid-cols-[auto_1fr_auto_auto] sm:items-end sm:gap-7">
-        <Pillar />
+      <div className="relative z-10 flex w-full flex-1 flex-col items-center px-4 pt-28 text-center sm:px-6 sm:pt-32 md:pt-36">
+        <h1 className="font-display text-5xl font-normal leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl">
+          {site.name}
+        </h1>
 
-        <div className="text-center sm:text-left">
-          <p className="mb-3 font-display text-sm tracking-[0.2em] text-accent">SALVE, I&apos;M</p>
-          <h1 className="font-display text-[38px] font-bold leading-[1.05] tracking-[0.02em] text-ink sm:text-[56px]">
-            {site.name.toUpperCase()}
-          </h1>
-
-          <div className="my-5 mx-auto h-0.5 w-16 bg-gold sm:mx-0" />
-
-          <div className="mb-5 flex flex-wrap justify-center gap-2 sm:justify-start">
-            {credentials.map((c) => (
-              <span
-                key={c}
-                className="rounded-[2px] border border-gold/35 bg-gold/10 px-2.5 py-1 font-serif text-[12.5px] font-semibold tracking-[0.04em] text-gold-dark"
-              >
-                {c}
-              </span>
-            ))}
-          </div>
-
-          <p className="mx-auto max-w-[480px] font-serif text-xl italic text-ink sm:mx-0">{site.headline}</p>
-          <p className="mx-auto mt-3.5 max-w-[460px] text-[16.5px] leading-relaxed text-muted sm:mx-0">
-            {site.subheadline}
-          </p>
-
-          <div className="mt-7 flex flex-wrap justify-center gap-3.5 sm:justify-start">
-            <a href="#projects" className={ui.btnPrimary}>
-              MY PROJECTS
-            </a>
-            <a href="#contact" className={ui.btnGhost}>
-              GET IN TOUCH
-            </a>
-          </div>
+        <div className="mt-4 flex items-center justify-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-faint">
+          {credentials.map((c, i) => (
+            <span key={c} className="flex items-center gap-3">
+              {c}
+              {i < credentials.length - 1 && (
+                <span className="h-1 w-1 rounded-full bg-gold" />
+              )}
+            </span>
+          ))}
         </div>
 
-        <Pillar />
+        <p className="mx-auto mt-6 max-w-sm text-sm leading-relaxed text-muted sm:mt-8 sm:max-w-md sm:text-base">
+          {site.headline}
+        </p>
 
-        <div className="col-span-3 mx-auto flex flex-col items-center sm:col-span-1 sm:mx-0">
-          <div className="relative h-[300px] w-[240px] rounded-[110px_110px_6px_6px] border-2 border-gold/40 bg-chip p-2.5 shadow-[0_24px_48px_-16px_rgba(42,32,22,0.3)]">
-            {/* Add a headshot at public/profile.jpg */}
-            <div className="relative h-full w-full overflow-hidden rounded-[100px_100px_2px_2px] bg-line">
-              <Image
-                src="/profile.jpg"
-                alt={site.name}
-                fill
-                sizes="240px"
-                className="object-cover"
-              />
-            </div>
-          </div>
-          <div className="-mt-2 max-w-[220px] rounded-[2px] border border-line bg-paper px-4 py-3 text-center shadow-[0_12px_28px_-14px_rgba(42,32,22,0.25)]">
-            <p className="font-display text-[12.5px] font-bold tracking-[0.03em] text-ink">
-              ASSOCIATE DIRECTOR
-            </p>
-            <p className="mt-1 font-serif text-[13px] italic text-muted">
-              Regency
-            </p>
-          </div>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10">
+          <a href="#projects" className={`${ui.btnPrimary} px-8 py-3.5`}>
+            My projects
+          </a>
+          <a href="#contact" className={`${ui.btnGhost} px-8 py-3.5`}>
+            Get in touch
+          </a>
         </div>
       </div>
 
-      <div className="arcade-divider" />
+      <div className="relative z-10 mt-auto w-full max-w-5xl px-4 sm:px-6">
+        <div className="border border-b-0 border-line bg-white/90 px-5 pb-0 pt-8 shadow-sm backdrop-blur-sm sm:px-8 sm:pt-12 md:px-12 md:pt-16">
+          <div className="grid gap-6 sm:gap-8 md:grid-cols-2 md:gap-16">
+            <div>
+              <p className="text-[11px] font-medium uppercase tracking-[0.2em] text-faint">
+                {hero.panelEyebrow}
+              </p>
+              <h2 className="mt-3 font-display text-2xl font-normal leading-tight tracking-tight text-ink sm:text-3xl md:text-4xl">
+                {hero.panelHeadline.map((line, i) => (
+                  <span key={line}>
+                    {line}
+                    {i < hero.panelHeadline.length - 1 && <br className="hidden sm:block" />}{" "}
+                  </span>
+                ))}
+              </h2>
+            </div>
+            <p className="self-end text-sm leading-relaxed text-muted md:text-[15px]">
+              {site.subheadline}
+            </p>
+          </div>
+
+          <div className="mt-6 h-px w-full bg-line sm:mt-8 md:mt-10" />
+
+          <div className="grid gap-2 py-3 sm:grid-cols-3 sm:gap-3 sm:py-0">
+            {hero.pillars.map((p) => (
+              <a key={p.number} href={p.href} className="numbered-row group no-underline">
+                <span className="text-sm">
+                  <span className="text-faint">{p.number}</span>
+                  <span className="mx-2 text-faint/60">/</span>
+                  <span className="font-medium text-ink">{p.label}</span>
+                </span>
+                <span className="numbered-row__arrow text-faint">→</span>
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

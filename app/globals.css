@@ -1,5 +1,5 @@
 /* Fonts must be imported before the Tailwind directives. */
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -16,229 +16,68 @@ html {
 }
 
 body {
-  background: #F3ECDD;
-  color: #2A2016;
-  font-family: 'EB Garamond', serif;
+  background: #FFFFFF;
+  color: #191919;
+  font-family: 'Inter', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 ::selection {
-  background: #A23E24;
-  color: #F3ECDD;
+  background: #191919;
+  color: #FFFFFF;
 }
 
-/* Colosseum arcade divider — repeating arch cut-outs */
-.arcade-divider {
-  height: 46px;
-  background-image: radial-gradient(circle at 23px 0, transparent 20px, #DED0B4 21px);
-  background-size: 46px 46px;
-  background-repeat: repeat-x;
-  background-position: bottom;
-}
-
-/* Gold guilloche rule used under the header and above the footer */
-.gold-rule {
-  height: 5px;
-  background-image: repeating-linear-gradient(90deg, #B7963E 0 10px, transparent 10px 20px);
-  opacity: 0.5;
-}
-
-/* Architectural design system */
-
-/* Section divider — evokes architectural section lines */
+/* Section eyebrow — micro-label with no ornament, just tracked-out caps */
 .section-divider {
-  display: flex;
-  align-items: center;
-  gap: 12px;
   padding-top: 48px;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
-}
-
-.section-divider::before {
-  content: '';
-  flex: 1;
-  height: 1.5px;
-  background: #B7963E;
-  opacity: 0.6;
+  padding-bottom: 8px;
+  margin-bottom: 16px;
 }
 
 .section-divider-label {
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.15em;
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: #B7963E;
-  white-space: nowrap;
-  flex-shrink: 0;
+  color: rgba(25, 25, 25, 0.5);
 }
 
-.section-divider::after {
-  content: '';
-  flex: 1;
-  height: 1.5px;
-  background: #B7963E;
-  opacity: 0.6;
+/* Numbered row — the 01 / 02 / 03 treatment used in the hero panel and
+   track record list. Background shift + arrow nudge on hover. */
+.numbered-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F4F3F3;
+  padding: 14px 20px;
+  transition: background-color 200ms ease;
 }
 
-/* Corner bracket — architectural callout accent */
-.corner-bracket {
-  position: relative;
-}
-
-.corner-bracket::before,
-.corner-bracket::after {
-  content: '';
-  position: absolute;
-  width: 8px;
-  height: 8px;
-  border: 1.5px solid #B7963E;
-  opacity: 0.7;
-}
-
-/* Top-left corner */
-.corner-bracket::before {
-  top: -4px;
-  left: -4px;
-  border-right: none;
-  border-bottom: none;
-}
-
-/* Bottom-right corner */
-.corner-bracket::after {
-  bottom: -4px;
-  right: -4px;
-  border-left: none;
-  border-top: none;
-}
-
-/* Card with gold accent line */
-.card-with-accent {
-  position: relative;
-  border: 1px solid #E8DCC8;
-  border-top: 3px solid #B7963E;
-  background: #FBF6EA;
-  padding: 20px;
-  transition: all 200ms ease;
-}
-
-.card-with-accent:hover {
-  border-top-color: #A23E24;
-  box-shadow: 0 8px 24px rgba(42, 32, 22, 0.08);
-}
-
-/* Highlight item with bracket styling */
-.highlight-item {
-  position: relative;
-  padding: 16px;
-  padding-left: 20px;
-  padding-right: 20px;
-  background: #FBF6EA;
-  border: 1px solid #E8DCC8;
-  font-size: 16px;
-  line-height: 1.6;
-}
-
-.highlight-item::before {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #B7963E;
-  top: 12px;
-  left: 10px;
-}
-
-/* Hover animation for cards */
-@media (prefers-reduced-motion: no-preference) {
-  .card-hover-accent {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .card-hover-accent::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, transparent, #B7963E, transparent);
-    transition: left 400ms ease;
-  }
-
-  .card-hover-accent:hover::before {
-    left: 100%;
-  }
-}
-
-/* Cornerstone plate — dark contrast band, like an inscribed tablet */
-.highlight-item-dark {
-  position: relative;
+/* Ghost variant — rests transparent, only shows the chip background on
+   hover. Used for plain list rows like Track Record, where every row
+   having a permanent grey chip would be too heavy. */
+.numbered-row--ghost {
+  background: transparent;
   padding: 16px 20px;
-  background: rgba(251, 246, 234, 0.04);
-  border: 1px solid rgba(183, 150, 62, 0.35);
-  font-size: 16px;
-  line-height: 1.6;
-  color: #F3ECDD;
 }
 
-.highlight-item-dark::before {
-  content: '';
-  position: absolute;
-  width: 6px;
-  height: 6px;
-  background: #B7963E;
-  top: 12px;
-  left: 10px;
+.numbered-row--ghost:hover {
+  background: #F4F3F3;
 }
 
-.plate-numeral {
-  font-family: 'Cinzel', serif;
-  font-weight: 700;
-  font-size: clamp(64px, 11vw, 128px);
-  line-height: 0.9;
-  letter-spacing: -0.01em;
-  color: #B7963E;
+.numbered-row:hover {
+  background: #eaeaea;
 }
 
-.plate-numeral-label {
-  margin-top: 10px;
-  font-family: 'Cinzel', serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-  color: #DED0B4;
+.numbered-row:hover .numbered-row__arrow {
+  color: rgba(25, 25, 25, 0.7);
+  transform: translateX(2px);
 }
 
-/* Hero — faint architectural grid, like a floor plan under tracing paper */
-.hero-blueprint-grid {
-  background-image:
-    repeating-linear-gradient(90deg, rgba(42, 32, 22, 0.05) 0 1px, transparent 1px 96px),
-    repeating-linear-gradient(0deg, rgba(42, 32, 22, 0.05) 0 1px, transparent 1px 96px);
-}
-
-/* Project cards — scale-bar tick marks along the left edge, like a blueprint ruler */
-.blueprint-card {
-  position: relative;
-  border-left: 3px solid transparent;
-  background-image: repeating-linear-gradient(
-    180deg,
-    #B7963E 0 2px,
-    transparent 2px 14px
-  );
-  background-size: 3px 100%;
-  background-repeat: no-repeat;
-  background-position: left;
-  padding-left: 1.75rem !important;
-}
-
-/* Blog cards — dashed top rule, like a clipped article */
-.clipping-card {
-  border-top: 2px dashed rgba(183, 150, 62, 0.55) !important;
+.numbered-row__arrow {
+  transition: color 200ms ease, transform 200ms ease;
 }
 
 /* Nav link underline — draws in from center on hover */
@@ -252,9 +91,9 @@ body {
   left: 50%;
   right: 50%;
   bottom: 2px;
-  height: 1.5px;
-  background: #A23E24;
-  transition: left 250ms ease, right 250ms ease;
+  height: 1px;
+  background: #191919;
+  transition: left 200ms ease, right 200ms ease;
 }
 
 .nav-link:hover::after {
@@ -262,7 +101,7 @@ body {
   right: 4px;
 }
 
-/* Monogram — subtle second ring appears on hover */
+/* Monogram ring — unchanged from the previous theme, still gold */
 .monogram-ring {
   position: relative;
 }

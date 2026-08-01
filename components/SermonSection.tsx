@@ -21,9 +21,9 @@ export function SermonSection() {
           href="https://www.sermonaudio.com/sermons/11914727398"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 font-display text-sm font-semibold tracking-[0.06em] text-base transition-colors hover:bg-accent-dark"
+          className="inline-flex items-center justify-center rounded-lg border border-ink px-6 py-3 font-sans text-sm font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-white"
         >
-          LISTEN ON SERMONAUDIO
+          Listen on SermonAudio
         </a>
       </div>
     </Section>

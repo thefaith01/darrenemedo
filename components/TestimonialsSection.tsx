@@ -26,11 +26,11 @@ function TestimonialCard({
       href={testimonial.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex w-[300px] shrink-0 snap-start flex-col rounded-[6px] border border-line bg-paper p-5 shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md sm:w-[320px]"
+      className="group flex w-[300px] shrink-0 snap-start flex-col rounded-lg border border-line bg-paper p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[320px]"
     >
       <div className="mb-3 flex items-center justify-between">
         <TrustpilotStars />
-        <span className="font-display text-[11px] font-bold tracking-[0.02em] text-[#00b67a]">
+        <span className="font-sans text-[11px] font-bold tracking-[0.02em] text-[#00b67a]">
           Trustpilot
         </span>
       </div>
@@ -39,12 +39,12 @@ function TestimonialCard({
       </p>
       <div className="mt-4 flex items-center justify-between border-t border-line pt-3">
         <div>
-          <p className="font-serif text-[13px] font-semibold text-muted">
+          <p className="font-sans text-[13px] font-medium text-ink">
             {testimonial.author}
           </p>
           <p className="mt-0.5 text-[11px] text-faint">{testimonial.date}</p>
         </div>
-        <span className="font-display text-[10px] font-semibold tracking-[0.03em] text-faint opacity-0 transition-opacity group-hover:opacity-100">
+        <span className="font-sans text-[10px] font-semibold tracking-[0.03em] text-faint opacity-0 transition-opacity duration-200 group-hover:opacity-100">
           VIEW ↗
         </span>
       </div>

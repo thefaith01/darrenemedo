@@ -1,8 +1,9 @@
 import type { Config } from 'tailwindcss'
 
 /*
- * Roman theme — marble, terracotta, and aged gold. Components reference
- * token names only; edit here to retheme the whole site.
+ * TrustFlow theme — white, near-black, and a single gold accent carried
+ * over from the previous Roman palette. Components reference token names
+ * only; edit here to retheme the whole site.
  */
 const config: Config = {
   content: [
@@ -12,20 +13,20 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        base: '#F3ECDD',
-        paper: '#FBF6EA',
-        ink: '#2A2016',
-        accent: { DEFAULT: '#A23E24', dark: '#7E2E1A' },
+        base: '#FFFFFF',
+        paper: '#F4F3F3',
+        ink: '#191919',
+        accent: { DEFAULT: '#191919', dark: 'rgba(25,25,25,0.9)' },
         gold: { DEFAULT: '#B7963E', dark: '#8A6A1F' },
-        muted: '#5A503E',
-        faint: '#A79C87',
-        line: '#DED0B4',
-        chip: '#EFE4C9',
+        muted: 'rgba(25,25,25,0.7)',
+        faint: 'rgba(25,25,25,0.5)',
+        line: '#e5e5e5',
+        chip: '#F4F3F3',
       },
       fontFamily: {
-        display: ['Cinzel', 'serif'],
-        sans: ['"EB Garamond"', 'serif'],
-        serif: ['"EB Garamond"', 'serif'],
+        display: ['Fraunces', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        serif: ['Fraunces', 'Georgia', 'serif'],
       },
     },
   },
