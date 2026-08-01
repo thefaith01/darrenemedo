@@ -3,20 +3,29 @@ import { Section } from "@/components/ui";
 
 export function CornerstoneSection() {
   return (
-    <Section id="highlights" className="bg-ink">
+    <Section id="track-record">
       <div className="section-divider">
         <span className="section-divider-label">Track record</span>
       </div>
 
       <div data-reveal className="text-center">
-        <p className="plate-numeral">100+</p>
-        <p className="plate-numeral-label">Property managers briefed on a new incentive scheme</p>
+        <p className="font-display text-6xl font-normal leading-none tracking-tight text-ink md:text-7xl">
+          100+
+        </p>
+        <p className="mt-3 text-[11px] font-medium uppercase tracking-[0.2em] text-faint">
+          Property managers briefed on a new incentive scheme
+        </p>
       </div>
 
-      <div data-reveal className="mt-10 grid gap-4 sm:grid-cols-2">
-        {highlights.map((h) => (
-          <div key={h.slice(0, 30)} className="corner-bracket highlight-item-dark">
-            <p>{h}</p>
+      <div className="mt-10 h-px w-full bg-line" />
+
+      <div data-reveal className="divide-y divide-line">
+        {highlights.map((h, i) => (
+          <div key={h.slice(0, 30)} className="numbered-row numbered-row--ghost">
+            <span className="text-sm leading-relaxed text-ink">
+              <span className="mr-3 text-faint">{String(i + 1).padStart(2, "0")} /</span>
+              {h}
+            </span>
           </div>
         ))}
       </div>

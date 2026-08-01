@@ -1,20 +1,20 @@
 import { ReactNode } from "react";
 
 /* ------------------------------------------------------------------ */
-/*  Shared tokens + primitives — Roman theme                          */
+/*  Shared tokens + primitives — TrustFlow theme                      */
 /*  Colors/fonts are defined in tailwind.config.ts                    */
 /* ------------------------------------------------------------------ */
 
 /** Class-name tokens for use in client components (where importing components is awkward). */
 export const ui = {
   btnPrimary:
-    "inline-flex items-center justify-center rounded-sm bg-accent px-6 py-3 font-display text-[13px] font-semibold tracking-[0.06em] text-base transition-colors hover:bg-accent-dark disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-lg bg-accent px-6 py-3 font-sans text-sm font-medium text-base transition-colors hover:bg-accent-dark disabled:opacity-50",
   btnGhost:
-    "inline-flex items-center justify-center rounded-sm border-[1.5px] border-gold px-6 py-3 font-display text-[13px] font-semibold tracking-[0.06em] text-ink transition-colors hover:bg-gold/10 disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-lg border border-ink px-6 py-3 font-sans text-sm font-medium text-ink transition-colors hover:bg-ink hover:text-base disabled:opacity-50",
   input:
-    "mt-1.5 w-full rounded-sm border border-line bg-white px-3.5 py-2.5 text-[15px] text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-gold/40",
-  label: "font-display text-xs font-semibold tracking-[0.04em] text-muted",
-  link: "font-display text-xs font-semibold tracking-[0.03em] text-accent underline underline-offset-4 hover:text-accent-dark",
+    "mt-1.5 w-full rounded-md border border-line bg-white px-3.5 py-2.5 text-[15px] text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-gold/40",
+  label: "font-sans text-[11px] font-medium uppercase tracking-[0.15em] text-muted",
+  link: "font-sans text-xs font-semibold tracking-[0.03em] text-accent underline underline-offset-4 hover:text-accent-dark",
 };
 
 export function Container({
@@ -39,7 +39,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <div className={`rounded-sm border border-line border-t-[3px] border-t-gold bg-paper p-6 ${className}`}>
+    <div className={`rounded-lg border border-line bg-paper p-6 ${className}`}>
       {children}
     </div>
   );
@@ -78,7 +78,7 @@ export function SectionHeader({
           <span className="section-divider-label">{eyebrow}</span>
         </div>
       )}
-      <h2 className="font-display text-[32px] font-bold leading-tight tracking-[-0.02em] text-ink">
+      <h2 className="font-display text-[32px] md:text-4xl font-normal leading-tight tracking-tight text-ink">
         {title}
       </h2>
       {subtitle && <p className="mt-2 text-[15px] text-muted">{subtitle}</p>}
