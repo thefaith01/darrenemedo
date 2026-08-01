@@ -8,6 +8,7 @@ const navLinks = [
   { href: "#waitlist", label: "Waiting List" },
   { href: "#projects", label: "Projects" },
   { href: "#blog", label: "Blog" },
+  { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
