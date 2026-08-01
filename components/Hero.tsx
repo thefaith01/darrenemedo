@@ -10,13 +10,8 @@ export function Hero() {
       <BoomerangVideoBg src="/video/hero-elevation.mp4" />
 
       <div className="relative z-10 flex w-full flex-1 flex-col items-center px-4 pt-28 text-center sm:px-6 sm:pt-32 md:pt-36">
-        <h1 className="font-display text-4xl font-normal leading-[1.1] tracking-tight text-ink sm:text-5xl md:text-7xl lg:text-8xl">
-          {hero.headlineLines.map((line, i) => (
-            <span key={line}>
-              {line}
-              {i < hero.headlineLines.length - 1 && <br />}
-            </span>
-          ))}
+        <h1 className="font-display text-5xl font-normal leading-[1.05] tracking-tight text-ink sm:text-6xl md:text-7xl lg:text-8xl">
+          {site.name}
         </h1>
 
         <div className="mt-4 flex items-center justify-center gap-3 text-[11px] font-medium uppercase tracking-[0.2em] text-faint">
@@ -31,12 +26,17 @@ export function Hero() {
         </div>
 
         <p className="mx-auto mt-6 max-w-sm text-sm leading-relaxed text-muted sm:mt-8 sm:max-w-md sm:text-base">
-          {site.subheadline}
+          {site.headline}
         </p>
 
-        <a href="#waitlist" className={`${ui.btnPrimary} mt-8 px-8 py-3.5 sm:mt-10`}>
-          Join Waiting List
-        </a>
+        <div className="mt-8 flex flex-wrap items-center justify-center gap-3 sm:mt-10">
+          <a href="#projects" className={`${ui.btnPrimary} px-8 py-3.5`}>
+            My projects
+          </a>
+          <a href="#contact" className={`${ui.btnGhost} px-8 py-3.5`}>
+            Get in touch
+          </a>
+        </div>
       </div>
 
       <div className="relative z-10 mt-auto w-full max-w-5xl px-4 sm:px-6">
@@ -56,7 +56,7 @@ export function Hero() {
               </h2>
             </div>
             <p className="self-end text-sm leading-relaxed text-muted md:text-[15px]">
-              {hero.panelBody}
+              {site.subheadline}
             </p>
           </div>
 
@@ -64,14 +64,14 @@ export function Hero() {
 
           <div className="grid gap-2 py-3 sm:grid-cols-3 sm:gap-3 sm:py-0">
             {hero.pillars.map((p) => (
-              <div key={p.number} className="numbered-row group">
+              <a key={p.number} href={p.href} className="numbered-row group no-underline">
                 <span className="text-sm">
                   <span className="text-faint">{p.number}</span>
                   <span className="mx-2 text-faint/60">/</span>
                   <span className="font-medium text-ink">{p.label}</span>
                 </span>
                 <span className="numbered-row__arrow text-faint">→</span>
-              </div>
+              </a>
             ))}
           </div>
         </div>

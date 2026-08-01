@@ -47,15 +47,12 @@ export const site = {
 };
 
 export const hero = {
-  headlineLines: ["Buildings run on", "attention."],
-  panelEyebrow: "What do I do?",
-  panelHeadline: ["Fewer clients,", "more attention"],
-  panelBody:
-    "Block managers who stay in post, communication that happens before something goes wrong, and caseloads kept deliberately manageable so each building gets the attention it needs.",
+  panelEyebrow: "Who I am",
+  panelHeadline: ["Property, people,", "and systems"],
   pillars: [
-    { number: "01", label: "Consistent" },
-    { number: "02", label: "Proactive" },
-    { number: "03", label: "Considered" },
+    { number: "01", label: "Property leadership", href: "#what-i-do" },
+    { number: "02", label: "Writing & mentoring", href: "#blog" },
+    { number: "03", label: "Building products", href: "#projects" },
   ],
 };
 

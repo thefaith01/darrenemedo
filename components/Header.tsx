@@ -8,7 +8,6 @@ const navLinks = [
   { href: "#waitlist", label: "Waiting List" },
   { href: "#projects", label: "Projects" },
   { href: "#blog", label: "Blog" },
-  { href: "#contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -35,10 +34,10 @@ export function Header() {
           ))}
         </nav>
         <a
-          href="#waitlist"
+          href="#contact"
           className="inline-flex items-center justify-center rounded-lg bg-ink px-5 py-2.5 font-sans text-sm font-medium text-white transition-colors duration-200 hover:bg-ink/90"
         >
-          Join Waiting List
+          Get in touch
         </a>
       </div>
     </header>
