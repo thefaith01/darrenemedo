@@ -12,7 +12,7 @@ export function ProjectsSection() {
       />
       <div data-reveal className="grid gap-4 sm:grid-cols-2">
         {projects.map((p) => (
-          <ProjectCard key={p.href} project={p} />
+          <ProjectCard key={p.title} project={p} />
         ))}
       </div>
     </Section>

@@ -14,7 +14,8 @@ export type Project = {
   title: string;
   blurb: string;
   tag: string;
-  href: string;
+  /** Omit for internal/private systems with no public link to send a visitor to. */
+  href?: string;
 };
 
 export type Testimonial = {
@@ -104,6 +105,12 @@ export const whatIDo = {
 };
 
 export const projects: Project[] = [
+  {
+    title: "Regency PO Portal",
+    blurb:
+      "A purchase order and request-for-quote system built end-to-end with AI for the whole company, spanning residential, commercial, and hard services: automated supplier emailing, PDF generation, and multi-contractor quote requests, replacing an unreliable legacy portal.",
+    tag: "Procurement",
+  },
   {
     title: "Sure Step",
     blurb:
