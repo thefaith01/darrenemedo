@@ -6,15 +6,16 @@ export function ProjectsSection() {
   return (
     <Section id="projects">
       <SectionHeader
-        eyebrow="Things I've built"
         title="Projects"
         subtitle="Live products, built end-to-end with AI."
       />
-      <div data-reveal className="grid gap-4 sm:grid-cols-2">
+      <ul data-reveal className="divide-y divide-line border-y border-line">
         {projects.map((p) => (
-          <ProjectCard key={p.title} project={p} />
+          <li key={p.title}>
+            <ProjectCard project={p} />
+          </li>
         ))}
-      </div>
+      </ul>
     </Section>
   );
 }

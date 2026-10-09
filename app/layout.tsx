@@ -1,9 +1,23 @@
 import type { Metadata } from "next";
+import { Public_Sans, Source_Serif_4 } from "next/font/google";
 import { Header } from "@/components/Header";
+import { HeaderScrollState } from "@/components/HeaderScrollState";
 import { SiteFooter } from "@/components/SiteFooter";
 import { ScrollReveal } from "@/components/ScrollReveal";
 import { site, connections } from "@/lib/content";
 import "./globals.css";
+
+const serif = Source_Serif_4({
+  subsets: ["latin"],
+  variable: "--font-serif",
+  display: "swap",
+});
+
+const sans = Public_Sans({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(site.domain),
@@ -75,7 +89,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${serif.variable} ${sans.variable}`}>
       <body className="bg-base overflow-x-hidden">
         <script
           type="application/ld+json"
@@ -84,6 +98,7 @@ export default function RootLayout({
         <Header />
         <main className="min-h-screen bg-base text-ink">{children}</main>
         <SiteFooter />
+        <HeaderScrollState />
         <ScrollReveal />
       </body>
     </html>

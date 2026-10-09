@@ -54,11 +54,11 @@ export function WaitlistForm() {
 
   if (status === "sent") {
     return (
-      <div className="py-6 text-center">
-        <p className="font-display text-lg font-bold text-ink">
+      <div className="py-4">
+        <p className="font-display text-2xl font-normal text-ink">
           You&apos;re on the list
         </p>
-        <p className="mt-1 text-sm text-muted">
+        <p className="mt-2 text-body text-muted">
           Applications are reviewed personally, and spots are rare. Please allow at
           least {RE_ENQUIRY_MONTHS} months before reaching out again.
         </p>
@@ -188,13 +188,13 @@ export function WaitlistForm() {
           name="bestInClass"
           type="checkbox"
           required
-          className="mt-0.5 h-4 w-4 shrink-0 rounded-sm border-line text-accent focus:ring-2 focus:ring-gold/40"
+          className="mt-1 h-4 w-4 shrink-0 rounded-sm border-line text-accent focus:ring-2 focus:ring-gold-dark/40"
         />
-        <label htmlFor="wl-best-in-class" className="text-[14px] leading-snug text-muted">
-          I&apos;m looking for best-in-class service, not the cheapest option
+        <label htmlFor="wl-best-in-class" className="text-sm text-ink">
+          I&apos;m looking for a high standard of service, not the cheapest option
         </label>
       </div>
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-red-700">{error}</p>}
       <button type="submit" disabled={status === "sending"} className={ui.btnPrimary}>
         {status === "sending" ? "Submitting..." : "Join the waiting list"}
       </button>

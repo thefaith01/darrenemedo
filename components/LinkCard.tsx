@@ -1,15 +1,13 @@
 import type { ExternalLink } from "@/lib/content";
 
+/** An external profile link as a plain list row. */
 export function LinkCard({ link }: { link: ExternalLink }) {
   return (
-    <a
-      href={link.href}
-      target="_blank"
-      rel="noopener"
-      className="block rounded-lg border border-line p-4 no-underline transition-colors duration-200 hover:border-gold"
-    >
-      <p className="font-sans text-[13.5px] font-semibold text-ink">{link.label} ↗</p>
-      <p className="mt-1.5 text-[13px] leading-relaxed text-muted">{link.description}</p>
+    <a href={link.href} target="_blank" rel="noopener" className="group block py-5 no-underline">
+      <p className="font-sans text-body font-medium text-ink underline decoration-transparent underline-offset-4 transition-colors duration-200 group-hover:decoration-ink/40">
+        {link.label} ↗
+      </p>
+      <p className="mt-1 text-sm text-muted">{link.description}</p>
     </a>
   );
 }

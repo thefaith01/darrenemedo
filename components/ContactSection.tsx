@@ -5,21 +5,22 @@ import { LinkCard } from "@/components/LinkCard";
 
 export function ContactSection() {
   return (
-    <Section id="contact" className="pb-10">
+    <Section id="contact" className="border-t border-line">
       <SectionHeader
-        eyebrow="Say hello"
         title="Contact"
         subtitle="Send me a message, or reach out on any of the platforms below."
       />
-      <div data-reveal className="grid gap-6 md:grid-cols-[1.4fr_1fr]">
+      <div data-reveal className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:gap-14">
         <Card>
           <ContactForm />
         </Card>
-        <div className="space-y-4">
+        <ul className="divide-y divide-line border-y border-line md:self-start">
           {connections.map((c) => (
-            <LinkCard key={c.href} link={c} />
+            <li key={c.href}>
+              <LinkCard link={c} />
+            </li>
           ))}
-        </div>
+        </ul>
       </div>
     </Section>
   );

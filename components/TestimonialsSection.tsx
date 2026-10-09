@@ -1,13 +1,15 @@
 import { testimonials } from "@/lib/content";
 import { Section, SectionHeader } from "@/components/ui";
 
-function TrustpilotStars() {
+/** Trustpilot's own star mark, kept in its brand green (documented in DESIGN.md). */
+function TrustpilotStars({ label }: { label: string }) {
   return (
-    <div className="flex gap-[3px]">
+    <div className="flex gap-[3px]" role="img" aria-label={label}>
       {Array.from({ length: 5 }).map((_, i) => (
         <span
           key={i}
-          className="flex h-[18px] w-[18px] items-center justify-center bg-[#00b67a] text-[11px] leading-none text-white"
+          aria-hidden="true"
+          className="flex h-[18px] w-[18px] items-center justify-center bg-[#00b67a] text-xs leading-none text-white"
         >
           ★
         </span>
@@ -26,47 +28,58 @@ function TestimonialCard({
       href={testimonial.url}
       target="_blank"
       rel="noopener noreferrer"
-      className="group flex w-[300px] shrink-0 snap-start flex-col rounded-lg border border-line bg-paper p-5 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md sm:w-[320px]"
+      className="flex w-[300px] shrink-0 snap-start flex-col rounded-md border border-line bg-base p-6 no-underline transition-colors duration-200 hover:border-ink/40 sm:w-[340px]"
     >
-      <div className="mb-3 flex items-center justify-between">
-        <TrustpilotStars />
-        <span className="font-sans text-[11px] font-bold tracking-[0.02em] text-[#00b67a]">
-          Trustpilot
-        </span>
-      </div>
-      <p className="flex-1 text-[14px] leading-relaxed text-ink">
-        &ldquo;{testimonial.text}&rdquo;
+      <TrustpilotStars label={`${testimonial.rating} out of 5 stars on Trustpilot`} />
+      <p className="mt-4 flex-1 text-sm text-ink">&ldquo;{testimonial.text}&rdquo;</p>
+      <p className="mt-5 text-sm font-medium text-ink">{testimonial.author}</p>
+      <p className="text-label font-normal text-muted">
+        {testimonial.source}, {testimonial.date}
       </p>
-      <div className="mt-4 flex items-center justify-between border-t border-line pt-3">
-        <div>
-          <p className="font-sans text-[13px] font-medium text-ink">
-            {testimonial.author}
-          </p>
-          <p className="mt-0.5 text-[11px] text-faint">{testimonial.date}</p>
-        </div>
-        <span className="font-sans text-[10px] font-semibold tracking-[0.03em] text-faint opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-          VIEW ↗
-        </span>
-      </div>
     </a>
   );
 }
 
+const FEATURED_AUTHOR = "Nathan";
+
 export function TestimonialsSection() {
+  const featured =
+    testimonials.find((t) => t.author === FEATURED_AUTHOR) ?? testimonials[0];
+  const rest = testimonials.filter((t) => t !== featured);
+
   return (
-    <Section id="testimonials">
+    <Section id="testimonials" spacing="loose">
       <SectionHeader
-        eyebrow="Verified reviews"
         title="What clients say"
         subtitle={`${testimonials.length} five-star reviews naming Darren directly, left by residents and clients.`}
       />
+
+      <figure data-reveal className="mb-14 max-w-3xl">
+        <blockquote className="font-display text-xl font-normal leading-[1.45] text-ink md:text-[1.75rem] md:leading-[1.4]">
+          &ldquo;{featured.text}&rdquo;
+        </blockquote>
+        <figcaption className="mt-5 text-sm text-muted">
+          <a
+            href={featured.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink"
+          >
+            {featured.author}
+          </a>
+          , {featured.source}, {featured.date}
+        </figcaption>
+      </figure>
+
       <div
         data-reveal
-        className="-mx-6 flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [scrollbar-width:thin]"
+        className="-mx-6 flex items-start snap-x snap-mandatory scroll-px-6 gap-4 overflow-x-auto px-6 pb-4 [scrollbar-width:thin]"
       >
-        {testimonials.map((testimonial) => (
+        {rest.map((testimonial) => (
           <TestimonialCard key={testimonial.url} testimonial={testimonial} />
         ))}
+        {/* Trailing spacer so the last card does not sit flush against the edge. */}
+        <span aria-hidden="true" className="w-2 shrink-0" />
       </div>
     </Section>
   );

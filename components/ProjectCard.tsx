@@ -1,36 +1,30 @@
 import type { Project } from "@/lib/content";
-import { Badge } from "@/components/ui";
 
+/** One project as a row: name and tag on the left, what it does on the right. */
 export function ProjectCard({ project }: { project: Project }) {
-  const content = (
-    <>
-      <Badge>{project.tag}</Badge>
-      <h3 className="mt-3 font-display text-xl font-normal text-ink">{project.title}</h3>
-      <p className="mt-2 text-[14.5px] leading-relaxed text-muted">{project.blurb}</p>
-      {project.href && (
-        <p className="mt-4 font-sans text-xs font-semibold tracking-[0.02em] text-accent">
-          {project.href.replace(/^https?:\/\/(www\.)?/, "").toUpperCase()} ↗
-        </p>
-      )}
-    </>
-  );
-
-  if (!project.href) {
-    return (
-      <div className="block rounded-lg border border-line bg-paper p-6">
-        {content}
-      </div>
-    );
-  }
+  const domain = project.href?.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
 
   return (
-    <a
-      href={project.href}
-      target="_blank"
-      rel="noopener"
-      className="block rounded-lg border border-line bg-paper p-6 no-underline transition-all duration-200 hover:-translate-y-0.5 hover:shadow-md"
-    >
-      {content}
-    </a>
+    <div className="grid gap-3 py-8 md:grid-cols-[minmax(0,1fr)_minmax(0,1.6fr)] md:gap-12">
+      <div>
+        <h3 className="font-display text-[1.375rem] font-normal leading-snug text-ink">
+          {project.title}
+        </h3>
+        <p className="mt-1 text-label font-normal text-muted">{project.tag}</p>
+      </div>
+      <div className="max-w-measure">
+        <p className="text-body text-muted">{project.blurb}</p>
+        {project.href && (
+          <a
+            href={project.href}
+            target="_blank"
+            rel="noopener"
+            className="mt-3 inline-block text-sm font-medium text-ink underline decoration-line underline-offset-4 transition-colors hover:decoration-ink"
+          >
+            {domain} ↗
+          </a>
+        )}
+      </div>
+    </div>
   );
 }

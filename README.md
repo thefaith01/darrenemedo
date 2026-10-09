@@ -5,7 +5,7 @@ Personal website for Darren Emedo. Single-page Next.js site: About, What I Do, P
 ## Stack
 
 - **Next.js 16** (App Router) + React 19 + TypeScript (strict)
-- **Tailwind CSS 3.4** — design tokens in `tailwind.config.ts` (placeholder palette; design pass pending)
+- **Tailwind CSS 3.4** — design tokens in `tailwind.config.ts`; the design system is documented in `DESIGN.md` and the audience in `PRODUCT.md`
 - **Supabase** — contact form messages only, server-side service key (demo mode when keys absent)
 - **Vercel** — hosting + darrenemedo.com domain
 - Conventions mirror the CMM project (cmmarketplace.org): flat PascalCase `components/`, shared primitives in `components/ui.tsx`, helpers in `lib/`, `@/*` path alias.

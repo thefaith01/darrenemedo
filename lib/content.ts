@@ -48,13 +48,7 @@ export const site = {
 };
 
 export const hero = {
-  panelEyebrow: "Who I am",
-  panelHeadline: ["Property, people,", "and systems"],
-  pillars: [
-    { number: "01", label: "Property leadership", href: "#what-i-do" },
-    { number: "02", label: "Writing & mentoring", href: "#blog" },
-    { number: "03", label: "Building products", href: "#projects" },
-  ],
+  panelHeadline: "Property, people, and systems",
 };
 
 export const about = {
@@ -79,7 +73,7 @@ export const highlights = [
 ];
 
 export const whatIDo = {
-  heading: "What I Do",
+  heading: "What I do",
   items: [
     {
       title: "Property Management Leadership",

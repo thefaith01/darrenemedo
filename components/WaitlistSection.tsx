@@ -3,13 +3,14 @@ import { WaitlistForm } from "@/components/WaitlistForm";
 
 export function WaitlistSection() {
   return (
-    <Section id="waitlist">
-      <SectionHeader
-        eyebrow="New instructions"
-        title="Not taking on any new clients right now. But if you're serious about best-in-class management, join the waiting list."
-      />
-      <div data-reveal className="grid gap-6 md:grid-cols-[1fr_1.2fr]">
-        <div className="space-y-4 text-[15px] leading-relaxed text-muted">
+    <Section id="waitlist" className="border-y border-line bg-paper">
+      <SectionHeader title="Waiting list" />
+      <div data-reveal className="grid gap-10 md:grid-cols-[1fr_1.15fr] md:gap-14">
+        <div className="max-w-measure space-y-5 text-body text-ink/85">
+          <p className="text-lead text-ink">
+            I&apos;m not taking on new clients right now. If you want your
+            building managed properly, join the waiting list.
+          </p>
           <p>
             Most buildings end up as one of many on an overloaded property
             manager&apos;s desk, stuck with rotating staff and communication that
@@ -20,7 +21,7 @@ export function WaitlistSection() {
             invested in getting it right and are managed on that standard, and
             communication is proactive rather than reactive. Caseloads are kept
             deliberately manageable so managers can actually give each building
-            the attention it needs to run precisely, not just adequately.
+            the attention it needs.
           </p>
           <p>
             I oversee the team and I&apos;m the key contact for onboarding and
@@ -30,8 +31,8 @@ export function WaitlistSection() {
           </p>
           <p>
             When I do take on new business, it&apos;s with people who are ready to
-            pay for that level of service. Not the cheapest option. Not the
-            middle ground. Market leading customer service and systems.
+            pay for that level of service. It isn&apos;t the cheapest option.
+            It&apos;s a higher standard of service, backed by proper systems.
           </p>
           <p>
             If that&apos;s you, join the waiting list. I review it personally and
@@ -39,7 +40,7 @@ export function WaitlistSection() {
             happens case by case, depending on capacity and alignment.
           </p>
         </div>
-        <Card>
+        <Card surface="base" className="md:self-start">
           <WaitlistForm />
         </Card>
       </div>

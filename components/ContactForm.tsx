@@ -43,9 +43,9 @@ export function ContactForm() {
 
   if (status === "sent") {
     return (
-      <div className="py-6 text-center">
-        <p className="font-display text-lg font-bold text-ink">Message sent</p>
-        <p className="mt-1 text-sm text-muted">Thanks for getting in touch — I&apos;ll reply soon.</p>
+      <div className="py-4">
+        <p className="font-display text-2xl font-normal text-ink">Message sent</p>
+        <p className="mt-2 text-body text-muted">Thanks for getting in touch. I&apos;ll reply soon.</p>
       </div>
     );
   }
@@ -70,7 +70,7 @@ export function ContactForm() {
         </label>
         <textarea id="message" name="message" required maxLength={4000} rows={5} className={ui.input} placeholder="What's on your mind?" />
       </div>
-      {error && <p className="text-sm text-red-600">{error}</p>}
+      {error && <p className="text-sm text-red-700">{error}</p>}
       <button type="submit" disabled={status === "sending"} className={ui.btnPrimary}>
         {status === "sending" ? "Sending..." : "Send message"}
       </button>

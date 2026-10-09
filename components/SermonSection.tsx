@@ -1,27 +1,23 @@
-import { Section, SectionHeader } from "@/components/ui";
+import { Section, SectionHeader, ui } from "@/components/ui";
 
 export function SermonSection() {
   return (
-    <Section id="sermon">
+    <Section id="sermon" spacing="tight">
       <SectionHeader
-        eyebrow="Faith"
         title="One sermon"
         subtitle="Exploring what happens when good intentions aren't enough, and why we can't perfectly fix our own moral failures."
       />
-      <div
-        data-reveal
-        className="mx-auto max-w-2xl space-y-4 text-center"
-      >
-        <p className="text-[15px] leading-relaxed text-muted">
-          In 2014, I preached once on 2 Samuel 6: the death of Uzzah. It's likely the only public
-          sermon I'll ever deliver. Not a pastor, just someone invited to speak on a text that
-          confused me for years.
+      <div data-reveal className="max-w-measure space-y-6">
+        <p className="text-body text-ink/85">
+          In 2014, I preached once on 2 Samuel 6: the death of Uzzah. It&apos;s likely the only
+          public sermon I&apos;ll ever deliver. Not a pastor, just someone invited to speak on a
+          text that confused me for years.
         </p>
         <a
           href="https://www.sermonaudio.com/sermons/11914727398"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center justify-center rounded-lg border border-ink px-6 py-3 font-sans text-sm font-medium text-ink transition-colors duration-200 hover:bg-ink hover:text-white"
+          className={ui.btnGhost}
         >
           Listen on SermonAudio
         </a>
