@@ -16,6 +16,8 @@ export type Project = {
   tag: string;
   /** Omit for internal/private systems with no public link to send a visitor to. */
   href?: string;
+  /** Screenshot of the live product, served from /public. */
+  image?: { src: string; alt: string };
 };
 
 export type Testimonial = {
@@ -122,6 +124,10 @@ export const projects: Project[] = [
       "A one-time-purchase AI life-coaching service. A structured conversation with an AI coach that ends with a personalised written plan.",
     tag: "AI coaching",
     href: "https://surestep.coach",
+    image: {
+      src: "/projects/surestep.webp",
+      alt: "Sure Step homepage: \"Your written plan for what's next. Tonight.\" with a Start my conversation button",
+    },
   },
   {
     title: "Church Member Marketplace",
@@ -129,6 +135,10 @@ export const projects: Project[] = [
       "A private, church-verified marketplace where members offer and find trusted services within their community.",
     tag: "Marketplace",
     href: "https://www.cmmarketplace.org",
+    image: {
+      src: "/projects/cmmarketplace.webp",
+      alt: "Church Member Marketplace homepage: \"Hire from the ekklesia\" beside a verified member's service card",
+    },
   },
 ];
 

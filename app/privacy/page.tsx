@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 };
 
 /*
- * DRAFT for Darren to review before relying on it. It describes what the
- * code does today: the contact form stores messages in Supabase, the waiting
+ * Approved by Darren on 10 October 2026. It describes what the code does
+ * today: the contact form stores messages in Supabase, the waiting
  * list form is emailed through Formspree, there are no analytics or cookies,
  * and fonts are self-hosted. Update it if any of that changes.
  */

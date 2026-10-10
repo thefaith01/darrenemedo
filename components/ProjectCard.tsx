@@ -1,8 +1,9 @@
+import Image from "next/image";
 import type { Project } from "@/lib/content";
 
 /**
  * A project. The featured one sits on a paper panel with a larger title;
- * the others are plain blocks under a single top rule.
+ * the others show a screenshot of the live product under a single top rule.
  */
 export function ProjectCard({ project, featured = false }: { project: Project; featured?: boolean }) {
   const domain = project.href?.replace(/^https?:\/\/(www\.)?/, "").replace(/\/$/, "");
@@ -33,6 +34,25 @@ export function ProjectCard({ project, featured = false }: { project: Project; f
 
   return (
     <article className="border-t border-line pt-6">
+      {project.image && (
+        <a
+          href={project.href}
+          target="_blank"
+          rel="noopener"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="mb-6 block overflow-hidden rounded-md border border-line"
+        >
+          <Image
+            src={project.image.src}
+            alt={project.image.alt}
+            width={1200}
+            height={675}
+            sizes="(min-width: 768px) 480px, 100vw"
+            className="h-auto w-full"
+          />
+        </a>
+      )}
       <p className="text-label font-normal text-muted">{project.tag}</p>
       <h3 className="mt-2 font-display text-[1.375rem] font-normal leading-snug text-ink">
         {project.title}
