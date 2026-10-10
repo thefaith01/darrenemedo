@@ -1,6 +1,10 @@
 import Image from "next/image";
 import { about } from "@/lib/content";
 import { Section, SectionHeader } from "@/components/ui";
+import { ReadMore } from "@/components/ReadMore";
+
+/** Paragraphs shown before the "Read more" toggle. */
+const LEAD = 2;
 
 export function AboutSection() {
   return (
@@ -11,9 +15,16 @@ export function AboutSection() {
         className="grid gap-10 md:grid-cols-[minmax(0,1fr)_280px] md:gap-16 lg:grid-cols-[minmax(0,1fr)_320px]"
       >
         <div className="max-w-measure space-y-5 text-body text-ink/85">
-          {about.paragraphs.map((p) => (
+          {about.paragraphs.slice(0, LEAD).map((p) => (
             <p key={p.slice(0, 40)}>{p}</p>
           ))}
+          {about.paragraphs.length > LEAD && (
+            <ReadMore>
+              {about.paragraphs.slice(LEAD).map((p) => (
+                <p key={p.slice(0, 40)}>{p}</p>
+              ))}
+            </ReadMore>
+          )}
         </div>
 
         {/* Sticky on desktop so the photo travels with the long biography

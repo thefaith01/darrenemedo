@@ -195,6 +195,13 @@ export function WaitlistForm() {
         </label>
       </div>
       {error && <p className="text-sm text-red-700">{error}</p>}
+      <p className="text-sm text-muted">
+        See the{" "}
+        <a href="/privacy" className="text-ink underline decoration-line underline-offset-4 hover:decoration-ink">
+          privacy notice
+        </a>{" "}
+        for how your details are used.
+      </p>
       <button type="submit" disabled={status === "sending"} className={ui.btnPrimary}>
         {status === "sending" ? "Submitting..." : "Join the waiting list"}
       </button>

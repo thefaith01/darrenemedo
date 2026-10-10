@@ -8,9 +8,9 @@ import { ReactNode } from "react";
 /** Class-name tokens for use in client components (where importing components is awkward). */
 export const ui = {
   btnPrimary:
-    "inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 font-sans text-body font-medium text-white transition-colors hover:bg-accent-dark disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-md bg-accent px-6 py-3 font-sans text-body font-medium text-white transition-[background-color,transform] duration-200 hover:bg-accent-dark active:translate-y-px disabled:opacity-50",
   btnGhost:
-    "inline-flex items-center justify-center rounded-md border border-ink px-6 py-3 font-sans text-body font-medium text-ink transition-colors hover:bg-ink hover:text-white disabled:opacity-50",
+    "inline-flex items-center justify-center rounded-md border border-ink px-6 py-3 font-sans text-body font-medium text-ink transition-[background-color,color,transform] duration-200 hover:bg-ink hover:text-white active:translate-y-px disabled:opacity-50",
   input:
     "mt-1.5 w-full rounded-md border border-line bg-white px-3.5 py-2.5 text-body text-ink placeholder:text-faint focus:outline-none focus:ring-2 focus:ring-gold-dark/40",
   label: "font-sans text-label text-ink",

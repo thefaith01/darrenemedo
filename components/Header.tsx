@@ -25,7 +25,8 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="nav-link font-sans text-sm text-muted transition-colors duration-200 hover:text-ink"
+              data-nav-link
+              className="nav-link font-sans text-sm text-muted transition-colors duration-200 hover:text-ink aria-[current=true]:text-ink"
             >
               {link.label}
             </a>
@@ -33,7 +34,7 @@ export function Header() {
         </nav>
         <a
           href="#contact"
-          className="inline-flex items-center justify-center rounded-md bg-ink px-5 py-2.5 font-sans text-sm font-medium text-white transition-colors duration-200 hover:bg-accent-dark"
+          className="inline-flex items-center justify-center rounded-md bg-ink px-5 py-2.5 font-sans text-sm font-medium text-white transition-[background-color,transform] duration-200 hover:bg-accent-dark active:translate-y-px"
         >
           Get in touch
         </a>

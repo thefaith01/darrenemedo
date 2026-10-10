@@ -64,12 +64,23 @@ export const about = {
   ],
 };
 
-export const highlights = [
-  "Led a groupwide client retention initiative that reversed a year-on-year rise in losses, cutting attrition by roughly a third.",
-  "Delivered a live national briefing to 100+ property managers on a new business-development incentive scheme.",
-  "Built the Employee NPS tracker now used monthly to identify high-performing teams and repeat what works.",
-  "Volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals.",
-  "Led a six-figure communal heating replacement project for a London residential block end-to-end, from options appraisal and lease compliance through statutory consultation and contractor procurement.",
+/** Track record, grouped so the section reads as two clusters, not one long list. Wording unchanged. */
+export const highlightGroups = [
+  {
+    title: "Business impact",
+    items: [
+      "Led a groupwide client retention initiative that reversed a year-on-year rise in losses, cutting attrition by roughly a third.",
+      "Built the Employee NPS tracker now used monthly to identify high-performing teams and repeat what works.",
+      "Led a six-figure communal heating replacement project for a London residential block end-to-end, from options appraisal and lease compliance through statutory consultation and contractor procurement.",
+    ],
+  },
+  {
+    title: "People and leadership",
+    items: [
+      "Delivered a live national briefing to 100+ property managers on a new business-development incentive scheme.",
+      "Volunteer mentor with The Property Institute's Mentor Circles, coaching early-career property professionals.",
+    ],
+  },
 ];
 
 export const whatIDo = {

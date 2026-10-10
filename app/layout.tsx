@@ -95,8 +95,16 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
         />
+        <a href="#main" className="skip-link">
+          Skip to content
+        </a>
+        {/* Sentinel watched by HeaderScrollState: once it leaves the
+            viewport the page has scrolled and the header turns solid. */}
+        <div id="top-sentinel" aria-hidden="true" className="absolute left-0 top-0 h-2 w-px" />
         <Header />
-        <main className="min-h-screen bg-base text-ink">{children}</main>
+        <main id="main" tabIndex={-1} className="min-h-[100dvh] bg-base text-ink focus:outline-none">
+          {children}
+        </main>
         <SiteFooter />
         <HeaderScrollState />
         <ScrollReveal />

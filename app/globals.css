@@ -43,7 +43,8 @@ body {
   transition: left 200ms ease, right 200ms ease;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link[aria-current="true"]::after {
   left: 0;
   right: 0;
 }
@@ -72,4 +73,58 @@ body {
     opacity: 0;
     transform: translateY(14px);
   }
+}
+
+/* Headings balance their lines; paragraphs avoid a lone last word. */
+h1, h2, h3, dt, blockquote {
+  text-wrap: balance;
+}
+
+p, li, dd {
+  text-wrap: pretty;
+}
+
+/* One visible focus treatment for every interactive element. */
+a:focus-visible,
+button:focus-visible,
+summary:focus-visible,
+select:focus-visible,
+input[type="checkbox"]:focus-visible {
+  outline: 2px solid #8A6A1F;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Skip link: off screen until it receives keyboard focus. */
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -64px;
+  z-index: 60;
+  background: #191919;
+  color: #FFFFFF;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 500;
+  transition: top 150ms ease;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+/* "Read more" disclosure built on native <details>, so it works without
+   JavaScript and the hidden text stays in the HTML for search engines. */
+.read-more > summary {
+  list-style: none;
+  cursor: pointer;
+}
+
+.read-more > summary::-webkit-details-marker {
+  display: none;
+}
+
+.read-more[open] > summary .read-more__closed,
+.read-more:not([open]) > summary .read-more__open {
+  display: none;
 }

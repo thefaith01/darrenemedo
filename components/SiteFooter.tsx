@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { site, connections } from "@/lib/content";
 
 export function SiteFooter() {
@@ -25,6 +26,9 @@ export function SiteFooter() {
         </nav>
         <p className="font-sans text-label font-normal text-muted">
           © {new Date().getFullYear()} {site.name}
+          <Link href="/privacy" className="ml-5 underline decoration-line underline-offset-4 hover:text-ink hover:decoration-ink">
+            Privacy
+          </Link>
         </p>
       </div>
     </footer>
